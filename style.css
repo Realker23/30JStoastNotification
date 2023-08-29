@@ -51,6 +51,7 @@ body{
     position: relative;
     /* transform: translateX(100%); */
     animation: moveleft 0.5s linear forwards;
+    animation: moveright .5s linear 3.5s forwards;
 }
 
 .toast::after{
@@ -61,7 +62,7 @@ body{
     position: absolute;
     height:.5rem;
     background-color: green; 
-    animation: anim 4s linear forwards;
+    animation: anim 3.5s linear forwards;
 }
 
 
@@ -86,4 +87,15 @@ body{
     100%{
         transform: translateX(0%);
     }
+}
+
+@keyframes moveright {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+
+    
 }

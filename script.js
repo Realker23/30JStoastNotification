@@ -18,9 +18,9 @@ function showToast(text){
         toast.classList.add('invalid');
     }
 
-    // setTimeout(()=>{
-    //     toast.remove();
-    // },4000);
+    setTimeout(()=>{
+        toast.remove();
+    },4000);
 }
 
 
