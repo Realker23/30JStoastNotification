@@ -1,0 +1,89 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    background-color: #f7edff;
+}
+
+.buttons{
+    margin: 5rem;
+}
+
+.buttons button{
+    background-color: #333;
+    color: #f7edff;
+    border: none;
+    outline-color: transparent;
+    width: 12rem;
+    height: 4rem;
+    margin:.5rem;
+    cursor: pointer;
+}
+
+#toastBox{
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.toast{
+    width: 35rem;
+    font-size: 1.6rem;
+    height: 8rem;
+    box-shadow: 0 0 2rem rgba(0,0,0, .3);
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 ;
+    padding: 2rem;
+    position: relative;
+    /* transform: translateX(100%); */
+    animation: moveleft 0.5s linear forwards;
+}
+
+.toast::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height:.5rem;
+    background-color: green; 
+    animation: anim 4s linear forwards;
+}
+
+
+.error::after{
+    background-color: red;
+}
+
+.invalid::after{
+    background-color: orange;
+}
+
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes moveleft {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
